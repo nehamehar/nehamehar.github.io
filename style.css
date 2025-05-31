@@ -1,0 +1,133 @@
+/* Base styles for scroll-snap and overall theme */
+html {
+    scroll-behavior: smooth; /* Smooth scrolling for navigation */
+    height: 100%; /* Ensure html takes full height for scroll-snap */
+    overflow: hidden; /* Prevent default body scrollbar */
+}
+body {
+    font-family: 'Inter', sans-serif;
+    --tw-bg-opacity: 1;
+    background-color:rgb(18 18 18 / var(--tw-bg-opacity, 1)); /* Dark Black */
+    color: #e2e8f0; /* Light Gray text for contrast */
+    height: 100%; /* Ensure body takes full height for scroll-snap */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main content area for scroll-snap */
+main {
+    flex-grow: 1; /* Allow main to take available space */
+    overflow-y: scroll; /* Enable vertical scrolling */
+    scroll-snap-type: y mandatory; /* Mandatory snapping on y-axis */
+    height: 100vh; /* Make main fill the viewport height */
+    padding-top: 64px; /* Account for sticky header height */
+}
+#scrollToTopBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: #6b21a8; /* purple-600 */
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      display: none; /* hidden by default */
+      transition: background-color 0.3s ease;
+    }
+
+    #scrollToTopBtn:hover {
+      background-color: #581c87; /* purple-700 */
+    }
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+.about{
+      display: flex; flex-direction: column; 
+      align-items:left;
+      padding: 0 20px;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      text-align: center;
+}
+/* Individual page sections for scroll-snap */
+.page-section {
+    min-height: calc(100vh - 64px); /* Full viewport height minus header */
+    scroll-snap-align: start; /* Snap to the start of the section */
+    /* Apply card styling directly to the section */
+    background-color:rgb(2, 3, 3); /* Slightly lighter dark gray for the card */
+    border-radius: 1rem; /* Rounded-xl equivalent */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg equivalent */
+    
+    /* Spacing and centering for the card itself */
+    margin: 2rem auto; /* Vertical spacing and horizontal centering */
+    width: calc(100% - 4rem); /* Full width minus side margins */
+    max-width: 1200px; /* Max width for the card */
+    
+    /* Internal padding for the card content */
+    padding: 2rem; /* Consistent internal padding for the card content */
+    box-sizing: border-box;
+
+    /* Flexbox for content alignment within the card */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+}
+
+@media (min-width: 768px) { /* md breakpoint */
+    .page-section {
+        padding: 3rem; /* Larger internal padding on desktop */
+        margin: 3rem auto; /* Larger vertical spacing and horizontal centering on desktop */
+        width: calc(100% - 6rem); /* Full width minus side margins */
+    }
+    #home.page-section {
+        /* Home page might need slightly different max-width for layout */
+        max-width: 1400px; /* Adjusted for wider layout of home page */
+    }
+    #about.page-section, #experience.page-section {
+        max-width: 900px; /* Adjusted for narrower content of about/experience */
+    }
+    #portfolio.page-section, #contact.page-section {
+        max-width: 900px; /* Standard width for these sections */
+    }
+}
+
+/* Header and footer specific styles */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    height: 64px; /* Fixed height for header */
+}
+footer {
+    flex-shrink: 0; /* Prevent footer from shrinking */
+}
+
+/* Navigation link active state */
+.nav-link {
+    color: #cbd5e1; /* Light gray for inactive links */
+}
+.nav-link.active {
+    font-weight: 600;
+    color: #a78bfa; /* Purple for active link */
+}
+
+/* Custom scrollbar for better aesthetics */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #2d3748; /* Darker scrollbar track */
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: #6b46c1; /* Purple scrollbar thumb */
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #8b5cf6; /* Lighter purple on hover */
+}
