@@ -5,7 +5,7 @@ This is my personal portfolio website built to showcase my skills, projects, and
 ##
 <br>
 <br>
-📋 Overview
+📋 Overview:
 ##
 <br>
 The portfolio includes the following sections:
@@ -22,7 +22,7 @@ The portfolio includes the following sections:
 <br>
 <br>
 
-✨ Features
+✨ Features:
 ##
 <br>
 📱 Responsive design for desktop and mobile devices.
@@ -36,5 +36,5 @@ The portfolio includes the following sections:
 🚀 Live Demo:
 ##
 <br>
-[[View live](https://nehamehar.github.io/)]
+[View live](https://nehamehar.github.io/)
 <br>
