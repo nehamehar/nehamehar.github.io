@@ -29,12 +29,8 @@ The portfolio includes the following sections:
 - 🚀 Interactive elements to enhance user experience.
 
 
-<br>
-<br>
-<br>
 
+## 🚀 Live Demo:
 
-🚀 Live Demo:
-##
 [View live](https://nehamehar.github.io/)
 <br>
