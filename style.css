@@ -2,16 +2,19 @@
 html {
     scroll-behavior: smooth; /* Smooth scrolling for navigation */
     height: 100%; /* Ensure html takes full height for scroll-snap */
-    overflow: hidden; /* Prevent default body scrollbar */
+    overflow-x: hidden; /* Prevent default body scrollbar */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
 }
 body {
     font-family: 'Inter', sans-serif;
     --tw-bg-opacity: 1;
-    background-color:rgb(18 18 18 / var(--tw-bg-opacity, 1)); /* Dark Black */
-    color: #e2e8f0; /* Light Gray text for contrast */
-    height: 100%; /* Ensure body takes full height for scroll-snap */
+    background-color: rgb(18 18 18 / var(--tw-bg-opacity, 1));
+    color: #e2e8f0;
+    height: 100%;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden; /* 👈 Add this line */
 }
 
 /* Main content area for scroll-snap */
@@ -21,36 +24,40 @@ main {
     scroll-snap-type: y mandatory; /* Mandatory snapping on y-axis */
     height: 100vh; /* Make main fill the viewport height */
     padding-top: 64px; /* Account for sticky header height */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
 }
 #scrollToTopBtn {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      background-color: #6b21a8; /* purple-600 */
-      color: white;
-      padding: 12px;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-      display: none; /* hidden by default */
-      transition: background-color 0.3s ease;
-    }
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #6b21a8; /* purple-600 */
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease;
+  z-index: 1000; /* above everything */
+  display: none;
+}
 
-    #scrollToTopBtn:hover {
-      background-color: #581c87; /* purple-700 */
-    }
+#scrollToTopBtn:hover {
+  background-color: #581c87; /* purple-700 */
+}
 
-    svg {
-      width: 24px;
-      height: 24px;
-    }
+#scrollToTopBtn i {
+  font-size: 24px;
+}
+
+
 .about{
       display: flex; flex-direction: column; 
       align-items:left;
       padding: 0 20px;
       font-family: Arial, sans-serif;
-      line-height: 1.6;
+      line-height: 1.4;
       text-align: center;
 }
 /* Individual page sections for scroll-snap */
@@ -70,7 +77,7 @@ main {
     /* Internal padding for the card content */
     padding: 2rem; /* Consistent internal padding for the card content */
     box-sizing: border-box;
-
+    overflow-x: hidden;
     /* Flexbox for content alignment within the card */
     display: flex;
     flex-direction: column;
@@ -118,7 +125,7 @@ footer {
 
 /* Custom scrollbar for better aesthetics */
 ::-webkit-scrollbar {
-    width: 8px;
+   display: none; /* Chrome, Safari, Opera */
 }
 ::-webkit-scrollbar-track {
     background: #2d3748; /* Darker scrollbar track */
