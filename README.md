@@ -2,7 +2,7 @@
 
 This is my personal portfolio website built to showcase my skills, projects, and experience.
 
----
+
 
 ## 📋 Overview
 
@@ -18,7 +18,7 @@ The portfolio includes the following sections:
 
 - ✉️ **Contact** — A form to get in touch with me.
 
----
+
 
 ## ✨ Features
 
@@ -28,8 +28,7 @@ The portfolio includes the following sections:
 
 - 🚀 Interactive elements to enhance user experience.
 
----
-ance user experience.
+
 <br>
 <br>
 <br>
