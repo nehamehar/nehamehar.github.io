@@ -1,10 +1,12 @@
-##🎨 Portfolio Website:
+🎨 Portfolio Website:
+##
 <br>
 This is my personal portfolio website built to showcase my skills, projects, and experience.
 ##
 <br>
 <br>
 📋 Overview
+##
 <br>
 The portfolio includes the following sections:
 <br>
@@ -19,7 +21,9 @@ The portfolio includes the following sections:
 ✉️ Contact — A form to get in touch with me.
 <br>
 <br>
+
 ✨ Features
+##
 <br>
 📱 Responsive design for desktop and mobile devices.
 <br>
@@ -30,6 +34,7 @@ The portfolio includes the following sections:
 <br>
 <br>
 🚀 Live Demo:
+##
 <br>
 [[View live](https://nehamehar.github.io/)]
 <br>
