@@ -1,13 +1,11 @@
 🎨 Portfolio Website:
 ##
-<br>
 This is my personal portfolio website built to showcase my skills, projects, and experience.
 ##
 <br>
 <br>
 📋 Overview:
 ##
-<br>
 The portfolio includes the following sections:
 <br>
 🏠 Intro — A welcoming landing page.
@@ -24,7 +22,6 @@ The portfolio includes the following sections:
 
 ✨ Features:
 ##
-<br>
 📱 Responsive design for desktop and mobile devices.
 <br>
 🎨 Clean and modern UI with smooth navigation.
@@ -33,8 +30,9 @@ The portfolio includes the following sections:
 <br>
 <br>
 <br>
+
+
 🚀 Live Demo:
 ##
-<br>
 [View live](https://nehamehar.github.io/)
 <br>
