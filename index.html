@@ -7,16 +7,34 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class=" shadow-lg py-4 px-6 md:px-12 flex justify-between items-center " style="background-color: #1E1E1E;">
+    <header class="shadow-lg py-4 px-6 md:px-12 flex justify-between items-center" style="background-color: #1E1E1E;">
         <div class="text-2xl font-bold text-white">
-  NEHA<span class="text-purple-800 font-extrabold">.</span></div>
-        <nav>
-            <ul class="flex space-x-4 md:space-x-8">
+            NEHA<span class="text-purple-800 font-extrabold">.</span>
+        </div>
+        <button class="md:hidden text-white focus:outline-none" id="menu-button" aria-label="Open navigation menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+        </button>
+        <nav class="hidden md:block" id="main-nav">
+            <ul class="flex space-x-4 md:space-x-8 text-white">
+                <li><a href="#Skills" class="nav-link hover:text-purple-400 transition-colors duration-300" data-page="skills">Skills</a></li>
+                <li><a href="#experience" class="nav-link hover:text-purple-400 transition-colors duration-300" data-page="experience">Experience</a></li>
+                <li><a href="#portfolio" class="nav-link hover:text-purple-400 transition-colors duration-300" data-page="portfolio">Projects</a></li>
+                <li><a href="#education" class="nav-link hover:text-purple-400 transition-colors duration-300" data-page="education">Education</a></li>
+                <li><a href="#contact" class="nav-link hover:text-purple-400 transition-colors duration-300" data-page="contact">Contact</a></li>
+            </ul>
+        </nav>
+        <nav class="md:hidden fixed inset-0 bg-[#1E1E1E] bg-opacity-95 z-40 hidden flex-col items-center justify-center space-y-8 text-xl" id="mobile-nav">
+            <button class="absolute top-4 right-6 text-white focus:outline-none" id="close-menu" aria-label="Close navigation menu">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+            <ul class="flex flex-col space-y-8 text-white text-2xl">
                 <li><a href="#Skills" class="nav-link hover:text-purple-400 transition-colors duration-300" data-page="skills">Skills</a></li>
                 <li><a href="#experience" class="nav-link hover:text-purple-400 transition-colors duration-300" data-page="experience">Experience</a></li>
                 <li><a href="#portfolio" class="nav-link hover:text-purple-400 transition-colors duration-300" data-page="portfolio">Projects</a></li>
@@ -26,11 +44,8 @@
         </nav>
     </header>
 
-    <main class="container mx-auto">
-
-        <section id="home" class="page-section" style="background-color: rgb(18 18 18 / var(--tw-bg-opacity, 1));">
-            <div class="flex flex-col md:flex-row justify-center md:justify-between items-center w-full">
-                <div class="text-center md:text-left md:w-1/2 mb-8 md:mb-0">
+    <main class="container mx-auto flex-grow overflow-y-auto"> <section id="home" class="page-section" style="background-color: rgb(18 18 18 / var(--tw-bg-opacity, 1));">
+            <div class="flex flex-col md:flex-row justify-center md:justify-between items-center w-full max-w-5xl mx-auto"> <div class="text-center md:text-left md:w-1/2 mb-8 md:mb-0">
                     <p class="text-lg md:text-xl text-purple-400 font-semibold mb-2">Hello, I'm</p>
                     <h1 class="text-5xl md:text-6xl font-extrabold text-white mb-4 leading-tight">
                         Neha Mehar
@@ -52,7 +67,7 @@
                         </a>
                     </div>
                 </div>
-                
+
                 <div class="md:w-1/3 flex justify-center">
                     <img src="images/My Photo.jpeg"
                          alt="Neha Mehar"
@@ -60,8 +75,10 @@
                 </div>
             </div>
         </section>
+
         <section id="Skills" class="page-section bg-[#00000] w-full md:max-w-3xl lg:max-w-4xl xl:max-w-5xl mx-auto rounded-lg shadow-md hover:shadow-xl hover:shadow-purple-700/50 transition-shadow duration-300 border border-gray-700">
-            <div class="container mx-auto px-4 py-8"> <div class="text-center mb-12">
+            <div class="container mx-auto px-4 py-8">
+                <div class="text-center mb-12">
                     <h2 class="text-3xl md:text-4xl font-bold text-white"><span class="text-purple-800">Skills</span></h2>
                 </div>
                 <div class="max-w-md mx-auto space-y-8">
@@ -101,7 +118,7 @@
 
         <section id="experience" class="page-section rounded-lg shadow-md hover:shadow-xl hover:shadow-purple-700/30 transition-shadow duration-300 border border-gray-700 w-full md:max-w-3xl lg:max-w-4xl xl:max-w-5xl mx-auto">
             <div class="container mx-auto px-4">
-                <h2 class="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Work  <span class="text-purple-800">Experience</span></h2>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Work <span class="text-purple-800">Experience</span></h2>
                 <div class="space-y-8 text-left w-full md:max-w-2xl lg:max-w-3xl xl:max-w-4xl mx-auto">
                     <div class="border-l-4 border-purple-500 pl-4 bg-gray-900 p-4 rounded-md">
                         <h3 class="text-2xl font-semibold text-white">Frontend Developer</h3>
@@ -109,7 +126,7 @@
                         <p class="text-lg text-gray-400">Gurgaon</p>
                         <ul class="list-disc list-inside text-gray-300 mt-2 space-y-1">
                             <li>Developed a responsive <strong>Expense Tracker</strong> web app using JavaScript, HTML, and CSS.</li>
-                            <li> Supporting 100+ user transactions with persistent localStorage.</li>
+                            <li>Supporting 100+ user transactions with persistent localStorage.</li>
                             <li>Automated expense categorization, improving financial reporting efficiency by <strong>30%.</strong></li>
                             <li>Built with a modular structure, ensuring reusability and clear separation of concerns.</li>
                             <li>Continuously enhancing the app with <strong>data visualization</strong> and <strong>performance optimizations.</strong></li>
@@ -213,11 +230,11 @@
                 </div>
             </div>
         </section>
-        
+
         <section id="contact" class="page-section rounded-lg shadow-md hover:shadow-xl hover:shadow-purple-700/30 transition-shadow duration-500 border border-gray-700 w-full md:max-w-3xl lg:max-w-4xl xl:max-w-5xl mx-auto">
             <div class="container mx-auto px-4">
                 <h2 class="text-3xl md:text-4xl font-bold text-white mb-8 text-center">Get in <span class="text-purple-800">Touch</span></h2>
-                    
+
                 <div class="bg-gray-900 p-6 rounded-lg shadow-md border border-gray-700 pt-9 w-full md:max-w-xl lg:max-w-2xl xl:max-w-3xl mx-auto">
                     <h3 class="text-2xl font-semibold text-white mb-6 text-center">Contact Information</h3>
                     <ul class="space-y-4 text-lg text-gray-300">
@@ -266,13 +283,121 @@
                 </div>
             </div>
         </section>
-        
+
     </main>
 
-   <footer class="border-t border-gray-700 py-12 mt-12 bg-gray-900">
+   <footer class="border-t border-gray-700 py-12 mt-12" style="background-color: #1E1E1E">
     <div class="max-w-5xl mx-auto px-3 flex flex-col md:flex-row items-center justify-center text-gray-400 text-base">
-      <p class="mb-4 md:mb-0">&copy; 2025 Made with ❤️ by <span class="text-purple-500 glow-text">Neha</span></p>
+      <p class="mb-4 md:mb-0 text-center">&copy; 2025 Made with ❤️ by <span class="text-purple-500 glow-text">Neha</span></p>
     </div>
 </footer>
-    </body>
+<button id="scrollToTopBtn" aria-label="Scroll to top">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+<script>
+    // JavaScript for Header and Scroll-to-Top functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        const navLinks = document.querySelectorAll('.nav-link');
+        const sections = document.querySelectorAll('.page-section');
+        const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+        const menuButton = document.getElementById('menu-button');
+        const mobileNav = document.getElementById('mobile-nav');
+        const closeMenuButton = document.getElementById('close-menu');
+        const mobileNavLinks = document.querySelectorAll('#mobile-nav .nav-link');
+
+        // Function to update active nav link based on scroll position
+        function updateActiveNavLink() {
+            let currentActive = null;
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 70; // Adjust for header height
+                const sectionBottom = sectionTop + section.offsetHeight;
+                if (window.scrollY >= sectionTop && window.scrollY < sectionBottom) {
+                    currentActive = section.id;
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.dataset.page && link.dataset.page.toLowerCase() === currentActive.toLowerCase()) {
+                    link.classList.add('active');
+                }
+            });
+             mobileNavLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.dataset.page && link.dataset.page.toLowerCase() === currentActive.toLowerCase()) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        // Show/hide scroll to top button
+        function toggleScrollToTopButton() {
+            if (window.scrollY > 300) {
+                scrollToTopBtn.style.display = 'block';
+            } else {
+                scrollToTopBtn.style.display = 'none';
+            }
+        }
+
+        // Smooth scroll for nav links
+        navLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                if (targetSection) {
+                    window.scrollTo({
+                        top: targetSection.offsetTop - 64, // Account for sticky header
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Smooth scroll for mobile nav links and close menu
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                if (targetSection) {
+                    mobileNav.classList.add('hidden'); // Hide mobile nav on click
+                    document.body.style.overflow = ''; // Restore scroll
+                    window.scrollTo({
+                        top: targetSection.offsetTop - 64, // Account for sticky header
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Scroll to top functionality
+        scrollToTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Mobile menu toggle
+        menuButton.addEventListener('click', () => {
+            mobileNav.classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
+        });
+
+        closeMenuButton.addEventListener('click', () => {
+            mobileNav.classList.add('hidden');
+            document.body.style.overflow = ''; // Restore scrolling
+        });
+
+
+        // Initial calls and event listeners
+        updateActiveNavLink();
+        toggleScrollToTopButton();
+        window.addEventListener('scroll', updateActiveNavLink);
+        window.addEventListener('scroll', toggleScrollToTopButton);
+    });
+</script>
+</body>
 </html>

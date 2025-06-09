@@ -1,39 +1,175 @@
 /* Base styles for scroll-snap and overall theme */
 html {
- scroll-behavior: smooth;
-    /* REMOVE height: 100%; from html to ensure it doesn't try to fill the viewport */
-    /* height: 100%; */
-    overflow-x: hidden;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
+    scroll-behavior: smooth;
+    /* overflow-x: hidden; - This can sometimes hide content, manage with flexbox/margins */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
 }
+
 body {
-   font-family: 'Inter', sans-serif;
+    font-family: 'Inter', sans-serif;
     --tw-bg-opacity: 1;
     background-color: rgb(18 18 18 / var(--tw-bg-opacity, 1));
     color: #e2e8f0;
-    /* KEEP these lines as per your request */
- display: flex; flex-direction: column; height: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure body takes at least full viewport height */
+    overflow-x: hidden; /* Ensure no horizontal scrollbar on body */
 }
-footer {
-    flex-shrink: 0; /* Ensures footer doesn't get smaller than its content */
-    /* Add margin-top if you want space between last section and footer */
-    margin-top: 3rem; /* Example: adds space above footer */
 
+/* Hide scrollbar for WebKit browsers */
+body::-webkit-scrollbar {
+    display: none;
 }
+
 header {
-    position: sticky; top: 0;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    height: 64px; /* Fixed height for header */
+    width: 100%; /* Ensure header spans full width */
 }
-
 
 main {
-    overflow-y: auto; /* Let browser handle scrolling for main content */
-    /* Ensure padding-top accounts for header height */
-    padding-top: 64px; /* Adjust if your header height is different */
+    flex-grow: 1; /* Allows main content to take up available space */
+    padding-top: 0; /* Remove padding-top here as header handles it */
     scrollbar-width: none;
     -ms-overflow-style: none;
-    /* No min-height: 100vh here, as flex-grow takes care of it */
+    display: flex; /* Use flexbox for main content */
+    flex-direction: column; /* Stack sections vertically */
+    /* REMOVE overflow-y: auto; from main, it's handled by body for the entire page scroll */
 }
+
+/* Hide scrollbar for WebKit browsers within main if it had overflow-y:auto; */
+main::-webkit-scrollbar {
+    display: none;
+}
+
+.page-section {
+    min-height: calc(100vh - 64px); /* Full viewport height minus header */
+    /* scroll-snap-align: start; This can sometimes interfere with smooth scrolling if not perfectly aligned */
+
+    background-color: rgb(2, 3, 3); /* Slightly lighter dark gray for the card */
+    border-radius: 1rem; /* rounded-xl equivalent */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg equivalent */
+
+    padding: 2rem 1rem; /* Consistent internal padding for the card content, slightly less on small screens */
+    box-sizing: border-box;
+    /* overflow-x: hidden; - Manage this on individual elements if needed */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    margin: 2rem 1rem; /* Spacing between sections on small screens */
+    width: calc(100% - 2rem); /* Full width minus side margins for section cards */
+    max-width: 100%; /* Ensure it doesn't exceed parent width initially */
+}
+
+/* ABOUT SECTION - Specific padding for tighter control on mobile */
+/* Assuming .about class is still needed for layout control within the section */
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally within about section */
+    padding: 0 1rem; /* Adjusted padding for smaller screens */
+    font-family: 'Inter', sans-serif; /* Keep Inter font */
+    line-height: 1.6; /* Slightly increased line-height for readability */
+    text-align: center; /* Center text by default */
+}
+
+
+.glow-text {
+    color: #a78bfa;
+    text-shadow:
+        0 0 5px #A020F0,
+        0 0 10px #A020F0,
+        0 0 15px #A020F0;
+}
+
+@media (min-width: 640px) { /* sm breakpoint, for smaller adjustments */
+    .page-section {
+        padding: 2.5rem; /* Slightly larger padding */
+    }
+    #home .flex-col.sm:flex-row { /* Specific adjustment for buttons on home section */
+        justify-content: center; /* Center buttons horizontally */
+    }
+}
+
+@media (min-width: 768px) { /* md breakpoint */
+    .page-section {
+        padding: 3rem; /* Larger internal padding on desktop */
+        margin: 3rem auto; /* Larger vertical spacing and horizontal centering on desktop */
+        width: calc(100% - 6rem); /* Full width minus side margins */
+        /* These max-widths are good, ensure they align with the overall site layout */
+        max-width: 1400px; /* Example: Default max-width for all sections unless overridden */
+    }
+    #home.page-section {
+        max-width: 1200px; /* Adjusted for wider layout of home page */
+    }
+    #Skills.page-section,
+    #experience.page-section,
+    #portfolio.page-section,
+    #education.page-section,
+    #contact.page-section {
+        max-width: 900px; /* Consistent max-width for content sections */
+    }
+    #home .flex-col.md:flex-row {
+        justify-content: space-between; /* Restore justify-between on desktop */
+    }
+    #home .text-center.md:text-left {
+        text-align: left; /* Restore text-left on desktop */
+    }
+}
+
+@media (min-width: 1024px) { /* lg breakpoint */
+    #home.page-section {
+        max-width: 1400px; /* Even wider for large screens */
+    }
+    #Skills.page-section,
+    #experience.page-section,
+    #portfolio.page-section,
+    #education.page-section,
+    #contact.page-section {
+        max-width: 1000px; /* Slightly wider for large screens */
+    }
+}
+
+/* Header and footer specific styles */
+/* header styles are already good */
+footer {
+    flex-shrink: 0; /* Prevent footer from shrinking */
+    margin-top: 4rem; /* Example: adds space above footer */
+}
+
+/* Navigation link active state */
+.nav-link {
+    color: #cbd5e1; /* Light gray for inactive links */
+    white-space: nowrap; /* Prevent nav links from wrapping on small screens */
+}
+.nav-link.active {
+    font-weight: 600;
+    color: #a78bfa; /* Purple for active link */
+}
+
+/* Custom scrollbar for better aesthetics */
+/* These are already defined in html and main selectors and are good */
+::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+::-webkit-scrollbar-track {
+    background: #2d3748; /* Darker scrollbar track */
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: #6b46c1; /* Purple scrollbar thumb */
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #8b5cf6; /* Lighter purple on hover */
+}
+
+/* Scroll to Top Button */
 #scrollToTopBtn {
   position: fixed;
   bottom: 30px;
@@ -47,7 +183,7 @@ main {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   transition: background-color 0.3s ease;
   z-index: 1000; /* above everything */
-  display: none;
+  display: none; /* controlled by JS */
 }
 
 #scrollToTopBtn:hover {
@@ -56,95 +192,4 @@ main {
 
 #scrollToTopBtn i {
   font-size: 24px;
-}
-
-.about{
-      display: flex; flex-direction: column; 
-      align-items:left;
-      padding: 0 20px;
-      font-family: Arial, sans-serif;
-      line-height: 1.4;
-      text-align: center;
-}
-/* Individual page sections for scroll-snap */
-.page-section {
-    min-height: calc(100vh - 64px); /* Full viewport height minus header */
-    scroll-snap-align: start; /* Snap to the start of the section */
-    
-    background-color:rgb(2, 3, 3); /* Slightly lighter dark gray for the card */
-    border-radius: 1rem; /* rounded-xl equivalent */
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg equivalent */
-    
-    /* Internal padding for the card content - Keep this */
-    padding: 2rem; /* Consistent internal padding for the card content */
-    box-sizing: border-box;
-    overflow-x: hidden;
-    
-    /* Flexbox for content alignment within the card - Keep this */
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Center content vertically */
-    align-items: center; /* Center content horizontally */
-
-}
-.glow-text {
-    /* Use a slightly lighter purple for the text itself to show through the glow */
-    color: #a78bfa; /* This is Tailwind's purple-400 */
-    text-shadow:
-        0 0 5px #A020F0,  /* Smaller, softer glow */
-        0 0 10px #A020F0, /* Medium glow */
-        0 0 15px #A020F0; /* Larger, more diffused glow */
-}
-@media (min-width: 768px) { /* md breakpoint */
-    .page-section {
-        padding: 3rem; /* Larger internal padding on desktop */
-        margin: 3rem auto; /* Larger vertical spacing and horizontal centering on desktop */
-        width: calc(100% - 6rem); /* Full width minus side margins */
-    }
-    #home.page-section {
-        /* Home page might need slightly different max-width for layout */
-        max-width: 1400px; /* Adjusted for wider layout of home page */
-    }
-    #about.page-section, #experience.page-section {
-        max-width: 900px; /* Adjusted for narrower content of about/experience */
-    }
-    #portfolio.page-section, #contact.page-section {
-        max-width: 900px; /* Standard width for these sections */
-    }
-}
-
-/* Header and footer specific styles */
-header {
-    position: sticky;
-    top: 0;
-    z-index: 50;
-    height: 64px; /* Fixed height for header */
-}
-footer {
-    flex-shrink: 0; /* Prevent footer from shrinking */
-}
-
-/* Navigation link active state */
-.nav-link {
-    color: #cbd5e1; /* Light gray for inactive links */
-}
-.nav-link.active {
-    font-weight: 600;
-    color: #a78bfa; /* Purple for active link */
-}
-
-/* Custom scrollbar for better aesthetics */
-::-webkit-scrollbar {
-   display: none; /* Chrome, Safari, Opera */
-}
-::-webkit-scrollbar-track {
-    background: #2d3748; /* Darker scrollbar track */
-    border-radius: 10px;
-}
-::-webkit-scrollbar-thumb {
-    background: #6b46c1; /* Purple scrollbar thumb */
-    border-radius: 10px;
-}
-::-webkit-scrollbar-thumb:hover {
-    background: #8b5cf6; /* Lighter purple on hover */
 }
