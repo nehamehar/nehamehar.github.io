@@ -32,7 +32,7 @@ header {
 
 main {
     flex-grow: 1; /* Allows main content to take up available space */
-    padding-top: 0; /* Remove padding-top here as header handles it */
+    padding-top: 1px; /* Remove padding-top here as header handles it */
     scrollbar-width: none;
     -ms-overflow-style: none;
     display: flex; /* Use flexbox for main content */
