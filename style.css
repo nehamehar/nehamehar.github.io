@@ -1,31 +1,38 @@
 /* Base styles for scroll-snap and overall theme */
 html {
-    scroll-behavior: smooth; /* Smooth scrolling for navigation */
-    height: 100%; /* Ensure html takes full height for scroll-snap */
-    overflow-x: hidden; /* Prevent default body scrollbar */
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE and Edge */
+ scroll-behavior: smooth;
+    /* REMOVE height: 100%; from html to ensure it doesn't try to fill the viewport */
+    /* height: 100%; */
+    overflow-x: hidden;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 body {
-    font-family: 'Inter', sans-serif;
+   font-family: 'Inter', sans-serif;
     --tw-bg-opacity: 1;
     background-color: rgb(18 18 18 / var(--tw-bg-opacity, 1));
     color: #e2e8f0;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    overflow-x: hidden; /* 👈 Add this line */
+    /* KEEP these lines as per your request */
+ display: flex; flex-direction: column; height: 100%;
+}
+footer {
+    flex-shrink: 0; /* Ensures footer doesn't get smaller than its content */
+    /* Add margin-top if you want space between last section and footer */
+    margin-top: 3rem; /* Example: adds space above footer */
+
+}
+header {
+    position: sticky; top: 0;
 }
 
-/* Main content area for scroll-snap */
+
 main {
-    flex-grow: 1; /* Allow main to take available space */
-    overflow-y: scroll; /* Enable vertical scrolling */
-    scroll-snap-type: y mandatory; /* Mandatory snapping on y-axis */
-    height: 100vh; /* Make main fill the viewport height */
-    padding-top: 64px; /* Account for sticky header height */
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE and Edge */
+    overflow-y: auto; /* Let browser handle scrolling for main content */
+    /* Ensure padding-top accounts for header height */
+    padding-top: 64px; /* Adjust if your header height is different */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    /* No min-height: 100vh here, as flex-grow takes care of it */
 }
 #scrollToTopBtn {
   position: fixed;
@@ -51,7 +58,6 @@ main {
   font-size: 24px;
 }
 
-
 .about{
       display: flex; flex-direction: column; 
       align-items:left;
@@ -64,27 +70,31 @@ main {
 .page-section {
     min-height: calc(100vh - 64px); /* Full viewport height minus header */
     scroll-snap-align: start; /* Snap to the start of the section */
-    /* Apply card styling directly to the section */
+    
     background-color:rgb(2, 3, 3); /* Slightly lighter dark gray for the card */
-    border-radius: 1rem; /* Rounded-xl equivalent */
+    border-radius: 1rem; /* rounded-xl equivalent */
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg equivalent */
     
-    /* Spacing and centering for the card itself */
-    margin: 2rem auto; /* Vertical spacing and horizontal centering */
-    width: calc(100% - 4rem); /* Full width minus side margins */
-    max-width: 1200px; /* Max width for the card */
-    
-    /* Internal padding for the card content */
+    /* Internal padding for the card content - Keep this */
     padding: 2rem; /* Consistent internal padding for the card content */
     box-sizing: border-box;
     overflow-x: hidden;
-    /* Flexbox for content alignment within the card */
+    
+    /* Flexbox for content alignment within the card - Keep this */
     display: flex;
     flex-direction: column;
     justify-content: center; /* Center content vertically */
     align-items: center; /* Center content horizontally */
-}
 
+}
+.glow-text {
+    /* Use a slightly lighter purple for the text itself to show through the glow */
+    color: #a78bfa; /* This is Tailwind's purple-400 */
+    text-shadow:
+        0 0 5px #A020F0,  /* Smaller, softer glow */
+        0 0 10px #A020F0, /* Medium glow */
+        0 0 15px #A020F0; /* Larger, more diffused glow */
+}
 @media (min-width: 768px) { /* md breakpoint */
     .page-section {
         padding: 3rem; /* Larger internal padding on desktop */
