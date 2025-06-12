@@ -10,9 +10,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="shadow-lg py-4 px-6 md:px-12 flex justify-between items-center" style="background-color: #1E1E1E;">
+    <header class="shadow-lg py-4 px-6 md:px-12 flex justify-between items-center bg-[#242424]">
         <div class="text-2xl font-bold text-white">
-            NEHA<span class="text-purple-800 font-extrabold">.</span>
+            NEHA<span class="text-[#9527AE] font-extrabold">.</span>
         </div>
         <button class="md:hidden text-white focus:outline-none" id="menu-button" aria-label="Open navigation menu">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -21,9 +21,11 @@
         </button>
         <nav class="hidden md:block" id="main-nav">
             <ul class="flex space-x-4 md:space-x-8 text-white">
+                   <li><a href="#experience" class="nav-link hover:text-purple-400 transition-colors duration-300" data-page="experience">Experience</a></li>
+                    <li><a href="#portfolio" class="nav-link hover:text-purple-400 transition-colors duration-300" data-page="portfolio">Projects</a></li>
                 <li><a href="#Skills" class="nav-link hover:text-purple-400 transition-colors duration-300" data-page="skills">Skills</a></li>
-                <li><a href="#experience" class="nav-link hover:text-purple-400 transition-colors duration-300" data-page="experience">Experience</a></li>
-                <li><a href="#portfolio" class="nav-link hover:text-purple-400 transition-colors duration-300" data-page="portfolio">Projects</a></li>
+            
+               
                 <li><a href="#education" class="nav-link hover:text-purple-400 transition-colors duration-300" data-page="education">Education</a></li>
                 <li><a href="#contact" class="nav-link hover:text-purple-400 transition-colors duration-300" data-page="contact">Contact</a></li>
             </ul>
@@ -35,18 +37,18 @@
                 </svg>
             </button>
             <ul class="flex flex-col space-y-8 text-white text-2xl">
-                <li><a href="#Skills" class="nav-link hover:text-purple-400 transition-colors duration-300" data-page="skills">Skills</a></li>
-                <li><a href="#experience" class="nav-link hover:text-purple-400 transition-colors duration-300" data-page="experience">Experience</a></li>
-                <li><a href="#portfolio" class="nav-link hover:text-purple-400 transition-colors duration-300" data-page="portfolio">Projects</a></li>
-                <li><a href="#education" class="nav-link hover:text-purple-400 transition-colors duration-300" data-page="education">Education</a></li>
-                <li><a href="#contact" class="nav-link hover:text-purple-400 transition-colors duration-300" data-page="contact">Contact</a></li>
+                <li><a href="#Skills" class="nav-link hover:text-[#8B25A2] transition-colors duration-300" data-page="skills">Skills</a></li>
+                <li><a href="#experience" class="nav-link hover:text-[#8B25A2] transition-colors duration-300" data-page="experience">Experience</a></li>
+                <li><a href="#portfolio" class="nav-link hover:text-[#8B25A2] transition-colors duration-300" data-page="portfolio">Projects</a></li>
+                <li><a href="#education" class="nav-link hover:text-[#8B25A2] transition-colors duration-300" data-page="contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <main class="container mx-auto flex-grow overflow-y-auto"> <section id="home" class="page-section" style="background-color: rgb(18 18 18 / var(--tw-bg-opacity, 1));">
+
+    <main class="container mx-auto flex-grow overflow-y-auto"> <section id="home" class="page-section" style="background-color: #000000;">
             <div class="flex flex-col md:flex-row justify-center md:justify-between items-center w-full max-w-5xl mx-auto"> <div class="text-center md:text-left md:w-1/2 mb-8 md:mb-0">
-                    <p class="text-lg md:text-xl text-purple-400 font-semibold mb-2">Hello, I'm</p>
+                    <p class="text-lg md:text-xl text-[#9527AE] font-semibold mb-2">Hello, I'm</p>
                     <h1 class="text-5xl md:text-6xl font-extrabold text-white mb-4 leading-tight">
                         Neha Mehar
                     </h1>
@@ -58,11 +60,11 @@
                     </p>
                     <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center md:justify-start">
                         <a href="#portfolio" data-page="portfolio"
-                           class="nav-link inline-flex items-center justify-center px-6 py-3 bg-purple-600 text-white font-medium rounded-md hover:bg-purple-700 transition-colors duration-300 shadow-lg">
+                           class="nav-link inline-flex items-center justify-center px-6 py-3 bg-[#8B25A2] text-white font-medium rounded-md hover:bg-[#A52CC0] transition-colors duration-300 shadow-lg">
                             View My Work
                         </a>
                         <a href="#contact" data-page="contact"
-                           class="nav-link inline-flex items-center justify-center px-6 py-3 border border-purple-600 text-purple-400 font-medium rounded-md hover:bg-purple-600 hover:text-white transition-colors duration-300 shadow-lg">
+                           class="nav-link inline-flex items-center justify-center px-6 py-3 border border-purple-600 text-purple-400 font-medium rounded-md hover:bg-[#A52CC0] hover:text-white transition-colors duration-300 shadow-lg">
                             Contact Me
                         </a>
                     </div>
@@ -76,54 +78,14 @@
             </div>
         </section>
 
-        <section id="Skills" class="page-section bg-[#00000] w-full md:max-w-3xl lg:max-w-4xl xl:max-w-5xl mx-auto rounded-lg shadow-md hover:shadow-xl hover:shadow-purple-700/50 transition-shadow duration-300 border border-gray-700">
-            <div class="container mx-auto px-4 py-8">
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold text-white"><span class="text-purple-800">Skills</span></h2>
-                </div>
-                <div class="max-w-md mx-auto space-y-8">
-                    <div class="text-center py-4 border-b-2 border-gray-800">
-                        <h3 class="text-xl md:text-2xl font-semibold text-purple-400 mb-2">Programming Languages</h3>
-                        <p class="text-gray-400 text-base md:text-lg">
-                            JavaScript, HTML, CSS, TypeScript (Familiar)
-                        </p>
-                    </div>
-                    <div class="text-center py-4 border-b-2 border-gray-800">
-                        <h3 class="text-xl md:text-2xl font-semibold text-purple-400 mb-2">Frameworks & Libraries</h3>
-                        <p class="text-gray-400 text-base md:text-lg">
-                            React.js, Tailwind CSS
-                        </p>
-                    </div>
-                    <div class="text-center py-4 border-b-2 border-gray-800">
-                        <h3 class="text-xl md:text-2xl font-semibold text-purple-400 mb-2">Tools & Build Systems</h3>
-                        <p class="text-gray-400 text-base md:text-lg">
-                            Vite, npm
-                        </p>
-                    </div>
-                    <div class="text-center py-4 border-b-2 border-gray-800">
-                        <h3 class="text-xl md:text-2xl font-semibold text-purple-400 mb-2">Developer Tools</h3>
-                        <p class="text-gray-400 text-base md:text-lg">
-                            Git, GitHub, VS Code
-                        </p>
-                    </div>
-                    <div class="text-center py-4">
-                        <h3 class="text-xl md:text-2xl font-semibold text-purple-400 mb-2">Cloud Platforms</h3>
-                        <p class="text-gray-400 text-base md:text-lg">
-                            Azure (Admin)
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <section id="experience" class="page-section rounded-lg shadow-md hover:shadow-xl hover:shadow-purple-700/30 transition-shadow duration-300 border border-gray-700 w-full md:max-w-3xl lg:max-w-4xl xl:max-w-5xl mx-auto">
             <div class="container mx-auto px-4">
-                <h2 class="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Work <span class="text-purple-800">Experience</span></h2>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Work <span class="text-[#9527AE]">Experience</span></h2>
                 <div class="space-y-8 text-left w-full md:max-w-2xl lg:max-w-3xl xl:max-w-4xl mx-auto">
-                    <div class="border-l-4 border-purple-500 pl-4 bg-gray-900 p-4 rounded-md">
+                    <div class="border-l-4 border-[#8B25A2] pl-4 bg-[#242424] p-4 rounded-md">
                         <h3 class="text-2xl font-semibold text-white">Frontend Developer</h3>
-                        <p class="text-purple-400">Tata Consultancy Services | Dec 2023 – Present</p>
-                        <p class="text-lg text-gray-400">Gurgaon</p>
+                        <p class="text-lg text-[#8B25A2]">Tata Consultancy Services | Dec 2023 – Present</p>
+                        <p class="text-lg text-[#6B6B6B]">Gurgaon</p>
                         <ul class="list-disc list-inside text-gray-300 mt-2 space-y-1">
                             <li>Developed a responsive <strong>Expense Tracker</strong> web app using JavaScript, HTML, and CSS.</li>
                             <li>Supporting 100+ user transactions with persistent localStorage.</li>
@@ -132,10 +94,10 @@
                             <li>Continuously enhancing the app with <strong>data visualization</strong> and <strong>performance optimizations.</strong></li>
                         </ul>
                     </div>
-                    <div class="border-l-4 border-purple-500 pl-4 bg-gray-900 p-4 rounded-md">
+                    <div class="border-l-4 border-[#8B25A2] pl-4 bg-[#242424] p-4 rounded-md">
                         <h3 class="text-2xl font-semibold text-white">Assistant System Engineer</h3>
-                        <p class="text-lg text-purple-400">Tata Consultancy Services | Nov 2022 – Oct 2023</p>
-                        <p class="text-lg text-gray-400">Gurgaon</p>
+                        <p class="text-lg text-[#8B25A2]">Tata Consultancy Services | Nov 2022 – Oct 2023</p>
+                        <p class="text-lg text-[#6B6B6B]">Gurgaon</p>
                         <ul class="list-disc list-inside text-gray-300 mt-2 space-y-1">
                             <li>Managed server-related tasks and configurations as an Azure Administrator.</li>
                         </ul>
@@ -143,19 +105,18 @@
                 </div>
             </div>
         </section>
-
         <section id="portfolio" class="page-section rounded-lg shadow-md hover:shadow-xl hover:shadow-purple-700/50 transition-shadow duration-300 border border-gray-700 w-full md:max-w-4xl lg:max-w-5xl xl:max-w-6xl mx-auto">
             <div class="container mx-auto px-4">
-                <h2 class="text-3xl md:text-4xl font-bold text-white mb-8 text-center">My <span class="text-purple-800">Projects</span></h2>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-8 text-center">My <span class="text-[#9527AE]">Projects</span></h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 w-full md:max-w-full lg:max-w-5xl xl:max-w-6xl mx-auto">
 
-                    <div class="bg-gray-900 p-6 rounded-lg shadow-md hover:shadow-xl hover:shadow-purple-700/50 transition-shadow duration-300 border border-gray-700">
+                    <div class="bg-[#242424] p-6 rounded-lg shadow-md hover:shadow-xl hover:shadow-purple-700/50 transition-shadow duration-300 border border-gray-700">
                         <h3 class="text-2xl font-semibold text-white mb-3 hover:text-purple-400">Todo Context Local</h3>
                         <p class="text-gray-300 mb-4">
                             Built a responsive React Todo app with Tailwind CSS and localStorage, featuring Undo support and optimized state with Hooks for seamless task management and fast UI performance.
                         </p>
                         <a href="https://nehamehar.github.io/todo-context-local/" target="_blank" rel="noopener noreferrer"
-                           class="inline-flex items-center px-4 py-2 bg-purple-600 text-white font-medium rounded-md hover:bg-purple-700 transition-colors duration-300 shadow-md">
+                           class="inline-flex items-center px-4 py-2 bg-[#8B25A2] mt-7 text-white font-medium rounded-md hover:bg-[#802296] transition-colors duration-300 shadow-md">
                             <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"></path>
                                 <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"></path>
@@ -164,14 +125,14 @@
                         </a>
                     </div>
 
-                    <div class="bg-gray-900 p-6 rounded-lg shadow-md hover:shadow-xl hover:shadow-purple-700/50 transition-shadow duration-300 border border-gray-700">
+                    <div class="bg-[#242424] p-6 rounded-lg shadow-md hover:shadow-xl hover:shadow-purple-700/50 transition-shadow duration-300 border border-gray-700">
                         <h3 class="text-2xl font-semibold text-white mb-3 hover:text-purple-400">Rock-Paper-Scissors Game</h3>
                         <p class="text-gray-300 mb-4">
                             Created a real-time Rock-Paper-Scissors game using JavaScript, HTML, and CSS with dynamic scoring, instant feedback, and an engaging interactive UI.
                         </p>
                         <br>
                         <a href="https://nehamehar.github.io/rock-paper-scissors/" target="_blank" rel="noopener noreferrer"
-                           class="inline-flex items-center px-4 py-2 bg-purple-600 text-white font-medium rounded-md hover:bg-purple-700 transition-colors duration-300 shadow-md">
+                           class="inline-flex items-center px-4 py-2 bg-[#8B25A2] text-white font-medium rounded-md hover:bg-[#802296] transition-colors duration-300 shadow-md">
                             <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"></path>
                                 <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"></path>
@@ -179,13 +140,13 @@
                             View Live
                         </a>
                     </div>
-                    <div class="bg-gray-900 p-6 rounded-lg shadow-md hover:shadow-xl hover:shadow-purple-700/50 transition-shadow duration-300 border border-gray-700">
+                    <div class="bg-[#242424] p-6 rounded-lg shadow-md hover:shadow-xl hover:shadow-purple-700/50 transition-shadow duration-300 border border-gray-700">
                         <h3 class="text-2xl font-semibold text-white mb-3 hover:text-purple-400">Interactive Background Color Changer</h3>
                         <p class="text-gray-300 mb-4">
                             Built a single-page React app with Tailwind CSS to dynamically change background colors using a 6-button UI panel and smooth hover transitions.
                         </p>
                         <a href="https://nehamehar.github.io/interactive-background-color-changer/" target="_blank" rel="noopener noreferrer"
-                           class="inline-flex items-center px-4 py-2 bg-purple-600 text-white font-medium rounded-md hover:bg-purple-700 transition-colors duration-300 shadow-md">
+                           class="inline-flex items-center px-4 py-2 bg-[#8B25A2] text-white font-medium rounded-md hover:bg-[#802296] transition-colors duration-300 shadow-md">
                             <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"></path>
                                 <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"></path>
@@ -194,20 +155,59 @@
                         </a>
                     </div>
 
-                    <div class="bg-gray-900 p-6 rounded-lg shadow-md hover:shadow-xl hover:shadow-purple-700/50 transition-shadow duration-300 border border-gray-700">
+                    <div class="bg-[#242424] p-6 rounded-lg shadow-md hover:shadow-xl hover:shadow-purple-700/50 transition-shadow duration-300 border border-gray-700">
                         <h3 class="text-2xl font-semibold text-white mb-3 hover:text-purple-400">Currency Converter</h3>
                         <p class="text-gray-300 mb-4">
                             Live rate currency conversion tool with a sleek interface, providing accurate and up-to-date exchange rates for various currencies.
                         </p>
                         <br>
                         <a href="https://nehamehar.github.io/currency-converter/" target="_blank" rel="noopener noreferrer"
-                           class="inline-flex items-center px-4 py-2 bg-purple-600 text-white font-medium rounded-md hover:bg-purple-700 transition-colors duration-300 shadow-md">
+                           class="inline-flex items-center px-4 mt-8 py-2 bg-[#8B25A2] text-white font-medium rounded-md hover:bg-[#802296] transition-colors duration-300 shadow-md">
                             <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"></path>
                                 <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"></path>
                             </svg>
                             View Live
                         </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="Skills" class="page-section bg-[#00000] w-full md:max-w-3xl lg:max-w-4xl xl:max-w-5xl mx-auto rounded-lg shadow-md hover:shadow-xl hover:shadow-purple-700/50 transition-shadow duration-300 border border-gray-700 ">
+            <div class="container mx-auto px-4 py-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white"><span class="text-[#9527AE]">Skills</span></h2>
+                </div>
+                <div class="max-w-md mx-auto space-y-8">
+                    <div class="text-center py-4 border-b-2 border-gray-800">
+                        <h3 class="text-xl md:text-2xl font-semibold text-[#8B25A2] mb-2">Programming Languages</h3>
+                        <p class="text-[#6B6B6B] text-base md:text-lg">
+                            JavaScript, HTML, CSS, TypeScript (Familiar)
+                        </p>
+                    </div>
+                    <div class="text-center py-4 border-b-2 border-gray-800">
+                        <h3 class="text-xl md:text-2xl font-semibold text-[#8B25A2] mb-2">Frameworks & Libraries</h3>
+                        <p class="text-[#6B6B6B] text-base md:text-lg">
+                            React.js, Tailwind CSS
+                        </p>
+                    </div>
+                    <div class="text-center py-4 border-b-2 border-gray-800">
+                        <h3 class="text-xl md:text-2xl font-semibold text-[#8B25A2] mb-2">Tools & Build Systems</h3>
+                        <p class="text-[#6B6B6B] text-base md:text-lg">
+                            Vite, npm
+                        </p>
+                    </div>
+                    <div class="text-center py-4 border-b-2 border-gray-800">
+                        <h3 class="text-xl md:text-2xl font-semibold text-[#8B25A2] mb-2">Developer Tools</h3>
+                        <p class="text-[#6B6B6B] text-base md:text-lg">
+                            Git, GitHub, VS Code
+                        </p>
+                    </div>
+                    <div class="text-center py-4">
+                        <h3 class="text-xl md:text-2xl font-semibold text-[#8B25A2] mb-2">Cloud Platforms</h3>
+                        <p class="text-[#6B6B6B] text-base md:text-lg">
+                            Azure (Admin)
+                        </p>
                     </div>
                 </div>
             </div>
@@ -215,188 +215,134 @@
 
         <section id="education" class="page-section rounded-lg shadow-md hover:shadow-xl hover:shadow-purple-700/30 transition-shadow duration-300 border border-gray-700 w-full md:max-w-xl lg:max-w-2xl xl:max-w-3xl mx-auto">
             <div class="container mx-auto px-4">
-                <h2 class="text-3xl md:text-4xl font-bold text-white mb-6 text-center">My <span class="text-purple-800">Education</span></h2>
-                <div class="bg-gray-900 p-6 rounded-lg shadow-md border border-gray-700 text-left flex flex-col justify-between w-full md:max-w-md lg:max-w-lg xl:max-w-xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-7 text-center">My <span class="text-[#9527AE]">Education</span></h2>
+                
                     <div>
-                        <p class="text-lg text-gray-300">B.Tech, JECRC College</p>
-                        <p class="text-md text-gray-400">2019 - 2022</p>
-                        <p class="text-xl text-purple-500 font-bold">8.5 CGPA</p>
+                        <p class="text-lg text-gray-300" style="justify-content: center; display: flex;">B.Tech, JECRC College</p>
+                        <p class="text-md text-[#6B6B6B] mt-1" style="justify-content: center; display: flex;">2018 - 2022</p>
+                        <p class="text-xl text-[#B330D0] font-bold mt-2" style="justify-content: center; display: flex;">8.5 CGPA</p>
                     </div>
-                    <div class="mt-6">
-                        <a href="https://drive.google.com/file/d/1aKuUr1jxqbl1dHiJTJZ63k5sW12HYn5J/view?usp=drive_link" download class="inline-flex items-center justify-center px-6 py-3 bg-purple-600 text-white font-medium rounded-md hover:bg-purple-700 transition-colors duration-300 shadow-lg w-full">
-                            View Resume
-                        </a>
-                    </div>
+                    <div class="mt-4"  style="display: flex; justify-content: center;">
+   <a href="https://drive.google.com/file/d/1rOFdn5EqvFKte7vxa1ZE2ZqSe2W8voNP/view?usp=drive_link" download
+       class="inline-flex items-center justify-center px-1 py-3 bg-[#8B25A2] text-white font-medium rounded-md hover:bg-[#A52CC0] transition-colors duration-300 shadow-lg w-full"
+       style="width: auto; min-width: auto; max-width: 200px; justify-content: center; display: flex; padding: 0.6rem;"> View Resume
+    </a>
+</div>
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="page-section rounded-lg shadow-md hover:shadow-xl hover:shadow-purple-700/30 transition-shadow duration-500 border border-gray-700 w-full md:max-w-3xl lg:max-w-4xl xl:max-w-5xl mx-auto">
-            <div class="container mx-auto px-4">
-                <h2 class="text-3xl md:text-4xl font-bold text-white mb-8 text-center">Get in <span class="text-purple-800">Touch</span></h2>
+<section id="contact" class="page-section rounded-lg shadow-md hover:shadow-xl hover:shadow-purple-700/30 transition-shadow duration-500 border border-gray-700 w-full md:max-w-3xl lg:max-w-4xl xl:max-w-5xl mx-auto">
+    <div class="container mx-auto px-4 ">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-8 text-center">Get in <span class="text-[#9527AE]">Touch</span></h2>
 
-                <div class="bg-gray-900 p-6 rounded-lg shadow-md border border-gray-700 pt-9 w-full md:max-w-xl lg:max-w-2xl xl:max-w-3xl mx-auto">
-                    <h3 class="text-2xl font-semibold text-white mb-6 text-center">Contact Information</h3>
-                    <ul class="space-y-4 text-lg text-gray-300">
-                        <li class="flex items-center">
-                            <svg class="w-4 h-9 mr-3 text-purple-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.774a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path></svg>
-                            <div>
-                                <p class="font-medium text-gray-400 text-sm">Phone</p>
-                                <a href="tel:+919587564937" class="hover:text-purple-400 transition-colors duration-300">+91 95875-64937</a>
-                            </div>
-                        </li>
-                       <li class="flex items-center text-base">
-                            <svg class="w-6 h-6 min-w-[24px] mr-3 text-purple-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
-                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
-                            </svg>
-                            <div>
-                                <p class="font-medium text-gray-400 text-sm">Email</p>
-                                <a href="mailto:nehamehar31@gmail.com" class="hover:text-purple-400 transition-colors duration-300">nehamehar31@gmail.com</a>
-                            </div>
-                        </li>
-                        <li class="flex items-center">
-                            <svg class="w-6 h-6 mr-3 text-purple-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
-                            <div>
-                                <p class="font-medium text-gray-400 text-sm">Location</p>
-                                <p>Gurgaon, India</p>
-                            </div>
-                        </li>
-                    </ul>
-                    <div class="mt-8">
-                        <h4 class="text-xl font-semibold text-white mb-3">Connect with Me</h4>
-                        <div class="flex space-x-4 justify-center"> <a href="https://www.linkedin.com/in/nehamehar/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-purple-400 transition-colors duration-300">
-                                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                            </a>
-                            <a href="https://github.com/nehamehar" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-purple-400 transition-colors duration-300">
-                                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 0C5.373 0 0 5.373 0 12c0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.386-1.333-1.755-1.333-1.755-1.09-.745.083-.73.083-.73 1.205.085 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.774.418-1.305.762-1.605-2.665-.305-5.466-1.332-5.466-5.93 0-1.31.467-2.38 1.236-3.22-.124-.303-.536-1.527.117-3.176 0 0 1.008-.322 3.3 1.23.957-.266 1.984-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.29-1.552 3.297-1.23 3.297-1.23.654 1.65.242 2.873.118 3.176.77.84 1.234 1.91 1.234 3.22 0 4.61-2.804 5.624-5.476 5.921.43.37.813 1.102.813 2.222 0 1.606-.015 2.898-.015 3.292 0 .322.216.694.825.576C20.565 21.796 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
-                            </svg>
-                        </a>
-                        <a href="https://leetcode.com/u/nehamehar/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-purple-400 transition-colors duration-300">
-                            <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M9 18l-6-6 6-6" />
-                                <path d="M15 6l6 6-6 6" />
-                            </svg>
-                        </a>
-                    </div>
+        <h3 class="text-2xl font-semibold text-white mb-6 text-center">Contact Information</h3>
+        <ul class="space-y-4 text-lg text-gray-300 flex flex-col items-center flex flex-col">
+            <li class="flex">
+                <svg class="w-4 h-9 mr-3 text-purple-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.774a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path></svg>
+                <div class="">
+                    <p class="font-medium text-gray-400 text-sm" >Phone</p>
+                    <a href="tel:+919587564937" class="hover:text-purple-400 transition-colors duration-300">+91 95875-64937</a>
                 </div>
+            </li>
+            <li class="flex text-base ml-9">
+                <svg class="w-6 h-6 min-w-[24px] mr-3 text-purple-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                </svg>
+                <div class="">
+                    <p class="font-medium text-gray-400 text-sm">Email</p>
+                    <a href="mailto:nehamehar31@gmail.com" class="hover:text-purple-400 transition-colors duration-300">nehamehar31@gmail.com</a>
+                </div>
+            </li>
+            <li class="flex mr-9">
+                <svg class="w-6 h-6 mr-3 text-purple-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
+                <div class="">
+                    <p class="font-medium text-gray-400 text-sm">Location</p>
+                    <p>Gurgaon, India</p>
+                </div>
+            </li>
+        </ul>
+        <div class="mt-6 text-center">
+            <h4 class="text-xl font-semibold text-white mb-3">Connect with Me</h4>
+            <hr class="border-t border-[#6B6B6B] my-4 mx-auto w-34">
+            <div class="flex space-x-5 mt-3 justify-center">
+                <a href="https://www.linkedin.com/in/nehamehar/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-gray-600 transition-colors duration-300">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                </a>
+                <a href="https://github.com/nehamehar" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-gray-600 transition-colors duration-300">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 0C5.373 0 0 5.373 0 12c0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.386-1.333-1.755-1.333-1.755-1.09-.745.083-.73.083-.73 1.205.085 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.774.418-1.305.762-1.605-2.665-.305-5.466-1.332-5.466-5.93 0-1.31.467-2.38 1.236-3.22-.124-.303-.536-1.527.117-3.176 0 0 1.008-.322 3.3 1.23.957-.266 1.984-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.29-1.552 3.297-1.23 3.297-1.23.654 1.65.242 2.873.118 3.176.77.84 1.234 1.91 1.234 3.22 0 4.61-2.804 5.624-5.476 5.921.43.37.813 1.102.813 2.222 0 1.606-.015 2.898-.015 3.292 0 .322.216.694.825.576C20.565 21.796 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                </a>
+                <a href="https://leetcode.com/u/nehamehar/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-gray-600 transition-colors duration-300">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 18l-6-6 6-6" />
+                        <path d="M15 6l6 6-6 6" />
+                    </svg>
+                </a>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
+
+
+
 
     </main>
 
-   <footer class="border-t border-gray-700 py-12 mt-12" style="background-color: #1E1E1E">
+   <footer class="border-t border-gray-700 py-12 mt-12" style="background-color: #242424">
     <div class="max-w-5xl mx-auto px-3 flex flex-col md:flex-row items-center justify-center text-gray-400 text-base">
       <p class="mb-4 md:mb-0 text-center">&copy; 2025 Made with ❤️ by <span class="text-purple-500 glow-text">Neha</span></p>
     </div>
 </footer>
-<button id="scrollToTopBtn" aria-label="Scroll to top">
-  <i class="fas fa-arrow-up"></i>
-</button>
 
 <script>
-    // JavaScript for Header and Scroll-to-Top functionality
     document.addEventListener('DOMContentLoaded', function() {
-        const navLinks = document.querySelectorAll('.nav-link');
-        const sections = document.querySelectorAll('.page-section');
-        const scrollToTopBtn = document.getElementById('scrollToTopBtn');
         const menuButton = document.getElementById('menu-button');
-        const mobileNav = document.getElementById('mobile-nav');
         const closeMenuButton = document.getElementById('close-menu');
-        const mobileNavLinks = document.querySelectorAll('#mobile-nav .nav-link');
+        const mobileNav = document.getElementById('mobile-nav');
+        const navLinks = mobileNav.querySelectorAll('.nav-link');
 
-        // Function to update active nav link based on scroll position
-        function updateActiveNavLink() {
-            let currentActive = null;
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop - 70; // Adjust for header height
-                const sectionBottom = sectionTop + section.offsetHeight;
-                if (window.scrollY >= sectionTop && window.scrollY < sectionBottom) {
-                    currentActive = section.id;
-                }
-            });
-
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.dataset.page && link.dataset.page.toLowerCase() === currentActive.toLowerCase()) {
-                    link.classList.add('active');
-                }
-            });
-             mobileNavLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.dataset.page && link.dataset.page.toLowerCase() === currentActive.toLowerCase()) {
-                    link.classList.add('active');
-                }
-            });
-        }
-
-        // Show/hide scroll to top button
-        function toggleScrollToTopButton() {
-            if (window.scrollY > 300) {
-                scrollToTopBtn.style.display = 'block';
-            } else {
-                scrollToTopBtn.style.display = 'none';
-            }
-        }
-
-        // Smooth scroll for nav links
-        navLinks.forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                const targetSection = document.querySelector(targetId);
-                if (targetSection) {
-                    window.scrollTo({
-                        top: targetSection.offsetTop - 64, // Account for sticky header
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-
-        // Smooth scroll for mobile nav links and close menu
-        mobileNavLinks.forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                const targetSection = document.querySelector(targetId);
-                if (targetSection) {
-                    mobileNav.classList.add('hidden'); // Hide mobile nav on click
-                    document.body.style.overflow = ''; // Restore scroll
-                    window.scrollTo({
-                        top: targetSection.offsetTop - 64, // Account for sticky header
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-
-        // Scroll to top functionality
-        scrollToTopBtn.addEventListener('click', function() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-
-        // Mobile menu toggle
-        menuButton.addEventListener('click', () => {
+        // Function to open the mobile navigation
+        function openMobileNav() {
             mobileNav.classList.remove('hidden');
+            mobileNav.classList.add('flex'); // Ensure it's flex when open
             document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
-        });
+        }
 
-        closeMenuButton.addEventListener('click', () => {
+        // Function to close the mobile navigation
+        function closeMobileNav() {
             mobileNav.classList.add('hidden');
+            mobileNav.classList.remove('flex'); // Remove flex when hidden
             document.body.style.overflow = ''; // Restore scrolling
+        }
+
+        // Event listener for opening the mobile menu
+        if (menuButton) {
+            menuButton.addEventListener('click', openMobileNav);
+        }
+
+        // Event listener for closing the mobile menu
+        if (closeMenuButton) {
+            closeMenuButton.addEventListener('click', closeMobileNav);
+        }
+
+        // Event listeners for navigation links within the mobile menu
+        // This closes the menu when a navigation link is clicked
+        navLinks.forEach(link => {
+            link.addEventListener('click', function(event) {
+                // Smooth scroll to section (if not handled by scroll-behavior: smooth)
+                const targetId = this.getAttribute('href');
+                if (targetId.startsWith('#')) {
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
+                closeMobileNav(); // Close the menu after clicking a link
+            });
         });
-
-
-        // Initial calls and event listeners
-        updateActiveNavLink();
-        toggleScrollToTopButton();
-        window.addEventListener('scroll', updateActiveNavLink);
-        window.addEventListener('scroll', toggleScrollToTopButton);
     });
 </script>
 </body>

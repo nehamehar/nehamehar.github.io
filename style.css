@@ -1,195 +1,159 @@
-/* Base styles for scroll-snap and overall theme */
-html {
-    scroll-behavior: smooth;
-    /* overflow-x: hidden; - This can sometimes hide content, manage with flexbox/margins */
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none;  /* IE and Edge */
-}
+ html {
+            scroll-behavior: smooth;
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none;  /* IE and Edge */
+        }
 
-body {
-    font-family: 'Inter', sans-serif;
-    --tw-bg-opacity: 1;
-    background-color: rgb(18 18 18 / var(--tw-bg-opacity, 1));
-    color: #e2e8f0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Ensure body takes at least full viewport height */
-    overflow-x: hidden; /* Ensure no horizontal scrollbar on body */
-}
+        body {
+            font-family: 'Inter', sans-serif;
+            --tw-bg-opacity: 1;
+            background-color: #000000;
+            color: #e2e8f0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensure body takes at least full viewport height */
+            overflow-x: hidden; /* Ensure no horizontal scrollbar on body */
+        }
 
-/* Hide scrollbar for WebKit browsers */
-body::-webkit-scrollbar {
-    display: none;
-}
+        /* Hide scrollbar for WebKit browsers */
+        body::-webkit-scrollbar {
+            display: none;
+        }
 
-header {
-    position: sticky;
-    top: 0;
-    z-index: 50;
-    height: 64px; /* Fixed height for header */
-    width: 100%; /* Ensure header spans full width */
-}
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            height: 72px; /* Fixed height for header */
+            width: 100%; /* Ensure header spans full width */
+        }
 
-main {
-    flex-grow: 1; /* Allows main content to take up available space */
-    padding-top: 1px; /* Remove padding-top here as header handles it */
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    display: flex; /* Use flexbox for main content */
-    flex-direction: column; /* Stack sections vertically */
-    /* REMOVE overflow-y: auto; from main, it's handled by body for the entire page scroll */
-}
+        main {
+            flex-grow: 4; /* Allows main content to take up available space */
+            padding-top: 1px; /* Remove padding-top here as header handles it */
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            display: flex; /* Use flexbox for main content */
+            flex-direction: column; /* Stack sections vertically */
+            /* REMOVE overflow-y: auto; from main, it's handled by body for the entire page scroll */
+        }
 
-/* Hide scrollbar for WebKit browsers within main if it had overflow-y:auto; */
-main::-webkit-scrollbar {
-    display: none;
-}
+        /* Hide scrollbar for WebKit browsers within main if it had overflow-y:auto; */
+        main::-webkit-scrollbar {
+            display: none;
+        }
 
-.page-section {
-    min-height: calc(100vh - 64px); /* Full viewport height minus header */
-    /* scroll-snap-align: start; This can sometimes interfere with smooth scrolling if not perfectly aligned */
+        .page-section {
+            min-height: calc(100vh - 64px); /* Full viewport height minus header */
+            background-color: #121212 ;/* Slightly lighter dark gray for the card */
+            border-radius: 1rem; /* rounded-xl equivalent */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg equivalent */
 
-    background-color: rgb(2, 3, 3); /* Slightly lighter dark gray for the card */
-    border-radius: 1rem; /* rounded-xl equivalent */
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg equivalent */
+            padding: 2rem 1rem; /* Consistent internal padding for the card content, slightly less on small screens */
+            box-sizing: border-box;
 
-    padding: 2rem 1rem; /* Consistent internal padding for the card content, slightly less on small screens */
-    box-sizing: border-box;
-    /* overflow-x: hidden; - Manage this on individual elements if needed */
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Center content vertically */
+            align-items: center; /* Center content horizontally */
+            margin: 2rem 1rem; /* Spacing between sections on small screens */
+            width: calc(100% - 2rem); /* Full width minus side margins for section cards */
+            max-width: 100%; /* Ensure it doesn't exceed parent width initially */
+        }
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Center content vertically */
-    align-items: center; /* Center content horizontally */
-    margin: 2rem 1rem; /* Spacing between sections on small screens */
-    width: calc(100% - 2rem); /* Full width minus side margins for section cards */
-    max-width: 100%; /* Ensure it doesn't exceed parent width initially */
-}
+        /* ABOUT SECTION - Specific padding for tighter control on mobile */
+        /* Assuming .about class is still needed for layout control within the section */
+        .about {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center content horizontally within about section */
+            padding: 0 1rem; /* Adjusted padding for smaller screens */
+            font-family: 'Inter', sans-serif; /* Keep Inter font */
+            line-height: 1.6; /* Slightly increased line-height for readability */
+            text-align: center; /* Center text by default */
+        }
 
-/* ABOUT SECTION - Specific padding for tighter control on mobile */
-/* Assuming .about class is still needed for layout control within the section */
-.about {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center content horizontally within about section */
-    padding: 0 1rem; /* Adjusted padding for smaller screens */
-    font-family: 'Inter', sans-serif; /* Keep Inter font */
-    line-height: 1.6; /* Slightly increased line-height for readability */
-    text-align: center; /* Center text by default */
-}
-
-
-.glow-text {
-    color: #a78bfa;
+        .glow-text {
+    color: rgb(178, 30, 231);
     text-shadow:
-        0 0 5px #A020F0,
-        0 0 10px #A020F0,
-        0 0 15px #A020F0;
+        0 0 2px rgb(77, 31, 106),
+        0 0 4px rgb(151, 15, 235),
+        0 0 6px #A020F0;
 }
 
-@media (min-width: 640px) { /* sm breakpoint, for smaller adjustments */
-    .page-section {
-        padding: 2.5rem; /* Slightly larger padding */
-    }
-    #home .flex-col.sm:flex-row { /* Specific adjustment for buttons on home section */
-        justify-content: center; /* Center buttons horizontally */
-    }
-}
 
-@media (min-width: 768px) { /* md breakpoint */
-    .page-section {
-        padding: 3rem; /* Larger internal padding on desktop */
-        margin: 3rem auto; /* Larger vertical spacing and horizontal centering on desktop */
-        width: calc(100% - 6rem); /* Full width minus side margins */
-        /* These max-widths are good, ensure they align with the overall site layout */
-        max-width: 1400px; /* Example: Default max-width for all sections unless overridden */
-    }
-    #home.page-section {
-        max-width: 1200px; /* Adjusted for wider layout of home page */
-    }
-    #Skills.page-section,
-    #experience.page-section,
-    #portfolio.page-section,
-    #education.page-section,
-    #contact.page-section {
-        max-width: 900px; /* Consistent max-width for content sections */
-    }
-    #home .flex-col.md:flex-row {
-        justify-content: space-between; /* Restore justify-between on desktop */
-    }
-    #home .text-center.md:text-left {
-        text-align: left; /* Restore text-left on desktop */
-    }
-}
+        @media (min-width: 640px) { /* sm breakpoint, for smaller adjustments */
+            .page-section {
+                padding: 2.5rem; /* Slightly larger padding */
+            }
+            #home .flex-col.sm:flex-row { /* Specific adjustment for buttons on home section */
+                justify-content: center; /* Center buttons horizontally */
+            }
+            #contact.page-section {
+                min-height: auto; /* Override the tall min-height */
+                height: auto;     /* Let the content define the height */
+                padding-top: 4rem;    /* Add some space at the top */
+                padding-bottom: 3rem; /* Add some space at the bottom */
+            }
+            /* Added rule for education section to control height on small screens */
+            #education.page-section {
+                min-height: auto; /* Override the tall min-height */
+                height: auto;     /* Let the content define the height */
+                padding-top: 4rem;    /* Add some space at the top */
+                padding-bottom: 3rem; /* Add some space at the bottom */
+            }
+        }
 
-@media (min-width: 1024px) { /* lg breakpoint */
-    #home.page-section {
-        max-width: 1400px; /* Even wider for large screens */
-    }
-    #Skills.page-section,
-    #experience.page-section,
-    #portfolio.page-section,
-    #education.page-section,
-    #contact.page-section {
-        max-width: 1000px; /* Slightly wider for large screens */
-    }
-}
+        @media (min-width: 768px) { /* md breakpoint */
 
-/* Header and footer specific styles */
-/* header styles are already good */
-footer {
-    flex-shrink: 0; /* Prevent footer from shrinking */
-    margin-top: 4rem; /* Example: adds space above footer */
-}
+            /* This is your DEFAULT style for all sections */
+            .page-section {
+                padding: 3rem;
+                margin: 3rem auto; /* Default vertical margin is 3rem (top and bottom) */
+                width: calc(100% - 6rem);
+                max-width: 1400px;
+            }
 
-/* Navigation link active state */
-.nav-link {
-    color: #cbd5e1; /* Light gray for inactive links */
-    white-space: nowrap; /* Prevent nav links from wrapping on small screens */
-}
-.nav-link.active {
-    font-weight: 600;
-    color: #a78bfa; /* Purple for active link */
-}
+            /* Make these sections adjust height automatically based on content */
+            #Skills.page-section,
+            #education.page-section,
+            #contact.page-section {
+                min-height: auto; /* Override the tall min-height */
+                height: auto;     /* Let the content define the height */
+                padding-top: 4rem;    /* Add some space at the top */
+                padding-bottom: 3rem; /* Add some space at the bottom */
+            }
 
-/* Custom scrollbar for better aesthetics */
-/* These are already defined in html and main selectors and are good */
-::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Opera */
-}
-::-webkit-scrollbar-track {
-    background: #2d3748; /* Darker scrollbar track */
-    border-radius: 10px;
-}
-::-webkit-scrollbar-thumb {
-    background: #6b46c1; /* Purple scrollbar thumb */
-    border-radius: 10px;
-}
-::-webkit-scrollbar-thumb:hover {
-    background: #8b5cf6; /* Lighter purple on hover */
-}
+            /* 2. Give the #experience section a standard margin */
+            #experience.page-section {
+                margin-top: 4rem; /* Explicitly set default margin or just let it inherit */
+                max-width: 900px;
+            }
 
-/* Scroll to Top Button */
-#scrollToTopBtn {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  background-color: #6b21a8; /* purple-600 */
-  color: white;
-  padding: 12px;
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  transition: background-color 0.3s ease;
-  z-index: 1000; /* above everything */
-  display: none; /* controlled by JS */
-}
+            /* Keep your other specific max-width rules as they are */
+            #home.page-section {
+                max-width: 1200px;
+            }
 
-#scrollToTopBtn:hover {
-  background-color: #581c87; /* purple-700 */
-}
+            /* ... other styles ... */
+        }
 
-#scrollToTopBtn i {
-  font-size: 24px;
-}
+        @media (min-width: 1024px) { /* lg breakpoint */
+            #home.page-section {
+                max-width: 1400px; /* Even wider for large screens */
+            }
+            #Skills.page-section,
+            #experience.page-section,
+            #portfolio.page-section,
+            #education.page-section,
+            #contact.page-section {
+                max-width: 1000px; /* Slightly wider for large screens */
+            }
+        }
+
+        /* Header and footer specific styles */
+        /* header styles are already good */
+        footer {
+            flex-shrink: 0; /* Prevent footer from shrinking */
+            margin-top: 4rem; /* Example: adds space above footer */
+        }
