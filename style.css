@@ -5,7 +5,7 @@
         }
 
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Poppins', sans-serif;
             --tw-bg-opacity: 1;
             background-color: #000000;
             color: #e2e8f0;
@@ -86,8 +86,8 @@
 }
 
 #experience:hover {
-  transform: scale(1.05); /* Adjust the scale factor for the desired size increase */
-  box-shadow: 0 1 7px 3px rgba(195, 92, 218, 0.5); /* Less faded glow */
+  transform: scale(1.01); /* Adjust the scale factor for the desired size increase */
+  box-shadow: 0 0 15px 5px  #2b2b2b; /* Less faded glow */
 }
 
 #portfolio {
@@ -96,8 +96,8 @@
 }
 
 #portfolio:hover {
-  transform: scale(1.05); /* Adjust the scale factor for the desired size increase */
-  box-shadow: 0 1 7px 3px rgba(195, 92, 218, 0.5); /* Less faded glow */
+  transform: scale(1.01); /* Adjust the scale factor for the desired size increase */
+  box-shadow: 0 0 15px 5px  #2b2b2b; /* Less faded glow */
 }
 
 #Skills {
@@ -106,8 +106,8 @@
 }
 
 #Skills:hover {
-  transform: scale(1.05); /* Adjust the scale factor for the desired size increase */
-  box-shadow: 0 1 px 3px rgba(195, 92, 218, 0.5); /* Less faded glow */
+  transform: scale(1.01); /* Adjust the scale factor for the desired size increase */
+  box-shadow: 0 0 15px 5px  #2b2b2b; /* Less faded glow */
 }
 
 #education {
@@ -116,8 +116,8 @@
 }
 
 #education:hover {
-  transform: scale(1.05); /* Adjust the scale factor for the desired size increase */
-  box-shadow: 0 1 9px 3px rgba(195, 92, 218, 0.5); /* Less faded glow */
+  transform: scale(1.01); /* Adjust the scale factor for the desired size increase */
+  box-shadow: 0 0 15px 5px #2b2b2b; /* Less faded glow */
 }
 
 #contact {
@@ -126,8 +126,8 @@
 }
 
 #contact:hover {
-  transform: scale(1.05); /* Adjust the scale factor for the desired size increase */
-  box-shadow: 0 1 9px 3px rgba(195, 92, 218, 0.5); /* Less faded glow */
+  transform: scale(1.01); /* Adjust the scale factor for the desired size increase */
+  box-shadow: 0 0 15px 5px  #2b2b2b; /* Less faded glow */
 }
 #Projects {
   /* Existing styles */
@@ -135,8 +135,8 @@
 }
 
 #Projects:hover {
-  transform: scale(1.05); /* Adjust the scale factor for the desired size increase */
-  box-shadow: 0 1 9px 3px rgba(195, 92, 218, 0.5); /* Less faded glow */
+  transform: scale(1.03); /* Adjust the scale factor for the desired size increase */
+
 }
 
         @media (min-width: 640px) { /* sm breakpoint, for smaller adjustments */
