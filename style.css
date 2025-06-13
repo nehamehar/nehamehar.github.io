@@ -80,7 +80,64 @@
         0 0 4px rgb(151, 15, 235),
         0 0 6px #A020F0;
 }
+#experience {
+  /* Existing styles */
+  transition: transform 0.3s ease-in-out; /* Add transition for smooth effect */
+}
 
+#experience:hover {
+  transform: scale(1.05); /* Adjust the scale factor for the desired size increase */
+  box-shadow: 0 1 7px 3px rgba(195, 92, 218, 0.5); /* Less faded glow */
+}
+
+#portfolio {
+  /* Existing styles */
+  transition: transform 0.3s ease-in-out; /* Add transition for smooth effect */
+}
+
+#portfolio:hover {
+  transform: scale(1.05); /* Adjust the scale factor for the desired size increase */
+  box-shadow: 0 1 7px 3px rgba(195, 92, 218, 0.5); /* Less faded glow */
+}
+
+#Skills {
+  /* Existing styles */
+  transition: transform 0.3s ease-in-out; /* Add transition for smooth effect */
+}
+
+#Skills:hover {
+  transform: scale(1.05); /* Adjust the scale factor for the desired size increase */
+  box-shadow: 0 1 px 3px rgba(195, 92, 218, 0.5); /* Less faded glow */
+}
+
+#education {
+  /* Existing styles */
+  transition: transform 0.3s ease-in-out; /* Add transition for smooth effect */
+}
+
+#education:hover {
+  transform: scale(1.05); /* Adjust the scale factor for the desired size increase */
+  box-shadow: 0 1 9px 3px rgba(195, 92, 218, 0.5); /* Less faded glow */
+}
+
+#contact {
+  /* Existing styles */
+  transition: transform 0.3s ease-in-out; /* Add transition for smooth effect */
+}
+
+#contact:hover {
+  transform: scale(1.05); /* Adjust the scale factor for the desired size increase */
+  box-shadow: 0 1 9px 3px rgba(195, 92, 218, 0.5); /* Less faded glow */
+}
+#Projects {
+  /* Existing styles */
+  transition: transform 0.3s ease-in-out; /* Add transition for smooth effect */
+}
+
+#Projects:hover {
+  transform: scale(1.05); /* Adjust the scale factor for the desired size increase */
+  box-shadow: 0 1 9px 3px rgba(195, 92, 218, 0.5); /* Less faded glow */
+}
 
         @media (min-width: 640px) { /* sm breakpoint, for smaller adjustments */
             .page-section {
