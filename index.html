@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="shadow-lg py-4 px-6 md:px-12 flex justify-between items-center bg-[#242424]">
+    <header id="main-header" class="py-4 px-6 md:px-12 flex justify-between items-center bg-[#242424] shadow-lg transition-all duration-300">
         <div class="text-2xl font-bold text-white">
             NEHA<span class="text-[#9527AE] font-extrabold">.</span>
         </div>
@@ -20,7 +20,8 @@
             </svg>
         </button>
         <nav class="hidden md:block" id="main-nav">
-            <ul class="flex space-x-4 md:space-x-8 text-white">
+            <ul class="flex space-x-4 md:space-x-8 text-white mx-14">
+                <li><a href="#home" class="nav-link hover:text-purple-400 transition-colors duration-300" data-page="home">Home</a></li>
                    <li><a href="#experience" class="nav-link hover:text-purple-400 transition-colors duration-300" data-page="experience">Experience</a></li>
                     <li><a href="#portfolio" class="nav-link hover:text-purple-400 transition-colors duration-300" data-page="portfolio">Projects</a></li>
                 <li><a href="#Skills" class="nav-link hover:text-purple-400 transition-colors duration-300" data-page="skills">Skills</a></li>
@@ -44,6 +45,7 @@
             </ul>
         </nav>
     </header>
+
 
 
     <main class="container mx-auto flex-grow overflow-y-auto"> <section id="home" class="page-section" style="background-color: #000000;">
@@ -78,7 +80,7 @@
             </div>
         </section>
 
-        <section id="experience" class="page-section rounded-lg shadow-sm hover:shadow-lg hover:shadow-[#5B5B5B] transition-shadow duration-300 border border-[#494949] w-full md:max-w-3xl lg:max-w-4xl xl:max-w-5xl mx-auto">
+        <section id="experience" class="page-section rounded-lg shadow-sm hover:shadow-lg hover:shadow-[#323232] transition-shadow duration-300 border border-[#202020] w-full md:max-w-3xl lg:max-w-4xl xl:max-w-5xl mx-auto">
             <div class="container mx-auto px-4">
                 <h2 class="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Work <span class="text-[#9527AE]">Experience</span></h2>
                 <div class="space-y-8 text-left w-full md:max-w-2xl lg:max-w-3xl xl:max-w-4xl mx-auto">
@@ -105,12 +107,12 @@
                 </div>
             </div>
         </section>
-        <section id="portfolio" class="page-section rounded-lg shadow-md hover:shadow-lg hover:shadow-[#5B5B5B] transition-shadow duration-300 border border-[#494949] w-full md:max-w-4xl lg:max-w-5xl xl:max-w-6xl mx-auto">
+        <section id="portfolio" class="page-section rounded-lg shadow-md hover:shadow-lg hover:shadow-[#323232] transition-shadow duration-300 border border-[#202020] w-full md:max-w-4xl lg:max-w-5xl xl:max-w-6xl mx-auto">
             <div class="container mx-auto px-4">
-                <h2 class="text-3xl md:text-4xl font-bold text-white mb-8 text-center">My <span class="text-[#9527AE]">Projects</span></h2>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-8 text-center"> <span class="text-[#9527AE]">Projects</span></h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 w-full md:max-w-full lg:max-w-5xl xl:max-w-6xl mx-auto">
 
-                    <div class="bg-[#242424] p-6 rounded-lg shadow-md  transition-shadow duration-300 border border-[#121212] hover:bg-[#373737]" id="Projects">
+                    <div class="bg-[#242424] p-6 rounded-lg shadow-md  transition-shadow duration-300 border border-[#202020] hover:bg-[#373737]" id="Projects">
                         <h3 class="text-2xl font-semibold text-[#A4A4A4] mb-3">Todo Context Local</h3>
                         <p class="text-gray-300 mb-4">
                             Built a responsive React Todo app with Tailwind CSS and localStorage, featuring Undo support and optimized state with Hooks for seamless task management and fast UI performance.
@@ -125,7 +127,7 @@
                         </a> 
                     </div>
 
-                    <div class="bg-[#242424] p-6 rounded-lg shadow-md  transition-shadow duration-300 border border-[#121212] hover:bg-[#373737]" id="Projects">
+                    <div class="bg-[#242424] p-6 rounded-lg shadow-md  transition-shadow duration-300 border border-[#202020] hover:bg-[#373737]" id="Projects">
                         <h3 class="text-2xl font-semibold text-[#A4A4A4] mb-3 ">Rock-Paper-Scissors Game</h3>
                         <p class="text-gray-300 mb-4">
                             Created a real-time Rock-Paper-Scissors game using JavaScript, HTML, and CSS with dynamic scoring, instant feedback, and an engaging interactive UI.
@@ -140,7 +142,7 @@
                             View Live
                         </a>
                     </div>
-                    <div class="bg-[#242424] p-6 rounded-lg shadow-md  transition-shadow duration-300 border border-[#121212] hover:bg-[#373737]" id="Projects">
+                    <div class="bg-[#242424] p-6 rounded-lg shadow-md  transition-shadow duration-300 border border-[#202020] hover:bg-[#373737]" id="Projects">
                         <h3 class="text-2xl font-semibold text-[#A4A4A4] mb-3 ">Interactive Background Color Changer</h3>
                         <p class="text-gray-300 mb-4">
                             Built a single-page React app with Tailwind CSS to dynamically change background colors using a 6-button UI panel and smooth hover transitions.
@@ -155,7 +157,7 @@
                         </a>
                     </div>
 
-                    <div class="bg-[#242424] p-6 rounded-lg shadow-md  transition-shadow duration-300 border border-[#121212] hover:bg-[#373737]" id="Projects">
+                    <div class="bg-[#242424] p-6 rounded-lg shadow-md  transition-shadow duration-300 border border-[#202020] hover:bg-[#373737]" id="Projects">
                         <h3 class="text-2xl font-semibold text-[#A4A4A4] mb-3">Currency Converter</h3>
                         <p class="text-[#FFFFFF] mb-4">
                             Live rate currency conversion tool with a sleek interface, providing accurate and up-to-date exchange rates for various currencies.
@@ -173,31 +175,31 @@
                 </div>
             </div>
         </section>
-        <section id="Skills" class="page-section bg-[#00000] w-full md:max-w-3xl lg:max-w-4xl xl:max-w-5xl mx-auto rounded-lg shadow-md hover:shadow-lg hover:shadow-[#5B5B5B] transition-shadow duration-300 border border-[#494949]">
+        <section id="Skills" class="page-section bg-[#00000] w-full md:max-w-3xl lg:max-w-4xl xl:max-w-5xl mx-auto rounded-lg shadow-md hover:shadow-lg hover:shadow-[#323232] transition-shadow duration-300 border border-[#363636]">
             <div class="container mx-auto px-4 py-8">
-                <div class="text-center mb-12">
+                <div class="text-center mb-7">
                     <h2 class="text-3xl md:text-4xl font-bold text-white"><span class="text-[#9527AE]">Skills</span></h2>
                 </div>
-                <div class="max-w-md mx-auto space-y-8">
-                    <div class="text-center py-4 border-b-2 border-[#494949]">
+                <div class="max-w-md mx-auto space-y-5">
+                    <div class="text-center py-4 border-b-2 border-[#202020]">
                         <h3 class="text-xl md:text-2xl font-semibold text-[#8B25A2] mb-2">Programming Languages</h3>
                         <p class="text-[#C8C8C8] text-base md:text-lg">
                             JavaScript, HTML, CSS, TypeScript (Familiar)
                         </p>
                     </div>
-                    <div class="text-center py-4 border-b-2 border-[#494949]">
+                    <div class="text-center py-4 border-b-2 border-[#202020]">
                         <h3 class="text-xl md:text-2xl font-semibold text-[#8B25A2] mb-2">Frameworks & Libraries</h3>
                         <p class="text-[#C8C8C8] text-base md:text-lg">
                             React.js, Tailwind CSS
                         </p>
                     </div>
-                    <div class="text-center py-4 border-b-2 border-[#494949]">
+                    <div class="text-center py-4 border-b-2 border-[#202020]">
                         <h3 class="text-xl md:text-2xl font-semibold text-[#8B25A2] mb-2">Tools & Build Systems</h3>
                         <p class="text-[#C8C8C8] text-base md:text-lg">
                             Vite, npm
                         </p>
                     </div>
-                    <div class="text-center py-4 border-b-2 border-[#494949]">
+                    <div class="text-center py-4 border-b-2 border-[#202020]">
                         <h3 class="text-xl md:text-2xl font-semibold text-[#8B25A2] mb-2">Developer Tools</h3>
                         <p class="text-[#C8C8C8] text-base md:text-lg">
                             Git, GitHub, VS Code
@@ -213,33 +215,28 @@
             </div>
         </section>
 
-        <section id="education" class="page-section rounded-lg shadow-md hover:shadow-lg hover:shadow-[#5B5B5B] transition-shadow duration-300 border border-[#494949] w-full md:max-w-xl lg:max-w-2xl xl:max-w-3xl mx-auto">
+        <section id="education" class="page-section rounded-lg shadow-md hover:shadow-lg hover:shadow-[#323232] transition-shadow duration-300 border border-[#202020] w-full md:max-w-xl lg:max-w-2xl xl:max-w-3xl mx-auto">
             <div class="container mx-auto px-4">
-                <h2 class="text-3xl md:text-4xl font-bold text-white mb-7 text-center">My <span class="text-[#9527AE]">Education</span></h2>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-7 text-center"> <span class="text-[#9527AE]">Education</span></h2>
                 
                     <div>
-                        <p class="text-lg text-[#C8C8C8]" style="justify-content: center; display: flex;">B.Tech, JECRC College</p>
+                        <p class="text-lg text-[#C8C8C8]" style="justify-content: center; display: flex;">B.Tech, JECRC Foundation, Jaipur (RTU)</p>
                         <p class="text-md text-[#B6B6B6] mt-1" style="justify-content: center; display: flex;">2018 - 2022</p>
                         <p class="text-xl text-[#B330D0] font-bold mt-2" style="justify-content: center; display: flex;">8.5 CGPA</p>
                     </div>
-                    <div class="mt-4"  style="display: flex; justify-content: center;">
-   <a href="https://drive.google.com/file/d/1rOFdn5EqvFKte7vxa1ZE2ZqSe2W8voNP/view?usp=drive_link" download
-       class="inline-flex items-center justify-center px-1 py-3 bg-[#8B25A2] text-white font-medium rounded-md hover:bg-[#A52CC0] transition-colors duration-300 shadow-lg w-full"
-       style="width: auto; min-width: auto; max-width: 200px; justify-content: center; display: flex; padding: 0.6rem;" id="Projects"> View Resume
-    </a>
-</div>
+                    
                 </div>
             </div>
         </section>
 
-<section id="contact" class="page-section rounded-lg shadow-md hover:shadow-lg hover:shadow-[#5B5B5B] transition-shadow duration-500 border border-[#494949] w-full md:max-w-3xl lg:max-w-4xl xl:max-w-5xl mx-auto">
+<section id="contact" class="page-section rounded-lg shadow-md hover:shadow-lg hover:shadow-[#323232] transition-shadow duration-500 border border-[#202020] w-full md:max-w-3xl lg:max-w-4xl xl:max-w-5xl mx-auto">
     <div class="container mx-auto px-4 ">
         <h2 class="text-3xl md:text-4xl font-bold text-white mb-8 text-center">Get in <span class="text-[#9527AE]">Touch</span></h2>
 
         <h3 class="text-2xl font-semibold text-[#C8C8C8] mb-6 text-center">Contact Information</h3>
         <ul class="space-y-4 text-lg text-gray-300 flex flex-col items-center flex flex-col">
             <li class="flex">
-                <svg class="w-4 h-9 mr-3 text-purple-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.774a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path></svg>
+                <svg class="w-6 h-9 mr-3 text-purple-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.774a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path></svg>
                 <div class="">
                     <p class="font-medium text-gray-400 text-sm" >Phone</p>
                     <a href="tel:+919587564937" class="hover:text-purple-400 transition-colors duration-300">+91 95875-64937</a>
@@ -252,7 +249,7 @@
                 </svg>
                 <div class="">
                     <p class="font-medium text-gray-400 text-sm">Email</p>
-                    <a href="mailto:nehamehar31@gmail.com" class="hover:shadow-[#C35CDA] transition-colors duration-300">nehamehar31@gmail.com</a>
+                    <a href="mailto:nehamehar31@gmail.com" class="hover:text-purple-400 transition-colors duration-300">nehamehar31@gmail.com</a>
                 </div>
             </li>
             <li class="flex mr-9">
@@ -265,8 +262,16 @@
         </ul>
         <div class="mt-6 text-center">
             <h4 class="text-xl font-semibold text-white mb-3">Connect with Me</h4>
-            <hr class="border-t border-[#6B6B6B] my-4 mx-auto w-34">
-            <div class="flex space-x-5 mt-3 justify-center">
+            <hr class="border-t border-[#202020] my-4 mx-auto w-34">
+            <div class="flex space-x-5 mt-2 justify-center">
+                <a href="https://drive.google.com/file/d/1rOFdn5EqvFKte7vxa1ZE2ZqSe2W8voNP/view?usp=drive_link"
+   target="_blank"
+   rel="noopener noreferrer"
+   class="text-gray-400 hover:text-gray-600 transition-colors duration-300"
+   aria-label="Resume">
+  <i class="fas fa-file-alt text-3xl w-7 h-15 mt-[0.1px]" data-bs-toggle="tooltip" data-bs-title="Resume"></i>
+</a>
+
                 <a href="https://www.linkedin.com/in/nehamehar/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-gray-600 transition-colors duration-300">
                     <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
                 </a>
@@ -281,6 +286,7 @@
                         <path d="M15 6l6 6-6 6" />
                     </svg>
                 </a>
+
             </div>
         </div>
     </div>
@@ -291,59 +297,39 @@
 
     </main>
 
-   <footer class="border-t border-gray-700 py-12 mt-12" style="background-color: #242424">
+   <footer class=" py-12 mt-12" style="background-color: #242424">
     <div class="max-w-5xl mx-auto px-3 flex flex-col md:flex-row items-center justify-center text-gray-400 text-base">
       <p class="mb-4 md:mb-0 text-center">&copy; 2025 Made with ❤️ by <span class="text-purple-500 glow-text">Neha</span></p>
     </div>
 </footer>
-
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const menuButton = document.getElementById('menu-button');
-        const closeMenuButton = document.getElementById('close-menu');
-        const mobileNav = document.getElementById('mobile-nav');
-        const navLinks = mobileNav.querySelectorAll('.nav-link');
+document.addEventListener("DOMContentLoaded", function () {
+    const header = document.getElementById("main-header");
+    const isHomePage = window.location.pathname === "/" || window.location.pathname === "/index.html";
 
-        // Function to open the mobile navigation
-        function openMobileNav() {
-            mobileNav.classList.remove('hidden');
-            mobileNav.classList.add('flex'); // Ensure it's flex when open
-            document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
+    function updateHeader() {
+        const scrolled = window.scrollY > 10;
+
+        if (isHomePage) {
+            if (scrolled) {
+                header.classList.remove("bg-[#242424]");
+                header.classList.add("bg-[#242424]/80", "shadow-lg");
+            } else {
+                header.classList.remove("bg-[#242424]/80", "shadow-lg");
+                header.classList.add("bg-[#242424]");
+            }
+        } else {
+            // Always solid on other pages
+            header.classList.remove("bg-[#242424]/80", "shadow-lg");
+            header.classList.add("bg-[#242424]");
         }
+    }
 
-        // Function to close the mobile navigation
-        function closeMobileNav() {
-            mobileNav.classList.add('hidden');
-            mobileNav.classList.remove('flex'); // Remove flex when hidden
-            document.body.style.overflow = ''; // Restore scrolling
-        }
-
-        // Event listener for opening the mobile menu
-        if (menuButton) {
-            menuButton.addEventListener('click', openMobileNav);
-        }
-
-        // Event listener for closing the mobile menu
-        if (closeMenuButton) {
-            closeMenuButton.addEventListener('click', closeMobileNav);
-        }
-
-        // Event listeners for navigation links within the mobile menu
-        // This closes the menu when a navigation link is clicked
-        navLinks.forEach(link => {
-            link.addEventListener('click', function(event) {
-                // Smooth scroll to section (if not handled by scroll-behavior: smooth)
-                const targetId = this.getAttribute('href');
-                if (targetId.startsWith('#')) {
-                    const targetElement = document.querySelector(targetId);
-                    if (targetElement) {
-                        targetElement.scrollIntoView({ behavior: 'smooth' });
-                    }
-                }
-                closeMobileNav(); // Close the menu after clicking a link
-            });
-        });
-    });
+    window.addEventListener("scroll", updateHeader);
+    updateHeader(); // Run on load
+});
 </script>
+
+
 </body>
 </html>
