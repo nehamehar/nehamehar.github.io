@@ -303,31 +303,92 @@
     </div>
 </footer>
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-    const header = document.getElementById("main-header");
-    const isHomePage = window.location.pathname === "/" || window.location.pathname === "/index.html";
+document.addEventListener('DOMContentLoaded', function () {
+    // Get all the necessary elements from the DOM
+    const menuButton = document.getElementById('menu-button');
+    const closeMenuButton = document.getElementById('close-menu');
+    const mobileNav = document.getElementById('mobile-nav');
+    const mainHeader = document.getElementById('main-header');
+    
+    // Get all the navigation links within the mobile menu
+    const mobileNavLinks = mobileNav.querySelectorAll('a.nav-link');
 
-    function updateHeader() {
-        const scrolled = window.scrollY > 10;
-
-        if (isHomePage) {
-            if (scrolled) {
-                header.classList.remove("bg-[#242424]");
-                header.classList.add("bg-[#242424]/80", "shadow-lg");
-            } else {
-                header.classList.remove("bg-[#242424]/80", "shadow-lg");
-                header.classList.add("bg-[#242424]");
-            }
-        } else {
-            // Always solid on other pages
-            header.classList.remove("bg-[#242424]/80", "shadow-lg");
-            header.classList.add("bg-[#242424]");
-        }
+    // --- Functionality to open the mobile menu ---
+    if (menuButton) {
+        menuButton.addEventListener('click', function () {
+            // When the menu button is clicked, remove the 'hidden' class to show the nav
+            mobileNav.classList.remove('hidden');
+        });
     }
 
-    window.addEventListener("scroll", updateHeader);
-    updateHeader(); // Run on load
+    // --- Functionality to close the mobile menu ---
+    if (closeMenuButton) {
+        closeMenuButton.addEventListener('click', function () {
+            // When the close button is clicked, add the 'hidden' class to hide the nav
+            mobileNav.classList.add('hidden');
+        });
+    }
+
+    // --- Functionality to close the menu after a link is clicked ---
+    // This makes for a better user experience
+    mobileNavLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileNav.classList.add('hidden');
+        });
+    });
+
+    // --- Optional: Add a shadow to the header on scroll ---
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 10) {
+            mainHeader.classList.add('shadow-xl', 'bg-[#282828]/80');
+        } else {
+            mainHeader.classList.remove('shadow-xl', 'bg-[#282828]/80');
+        }
+    });
+
+    // --- Scroll-to-Top Button Functionality ---
+    const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+    if(scrollToTopBtn) {
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) { // Show button after scrolling 300px
+                scrollToTopBtn.style.display = 'block';
+            } else {
+                scrollToTopBtn.style.display = 'none';
+            }
+        });
+
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+    
+    // --- Active Nav Link Highlighting on Scroll ---
+    const sections = document.querySelectorAll('.page-section');
+    const navLinks = document.querySelectorAll('nav a.nav-link');
+
+    window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            if (pageYOffset >= sectionTop - 150) { // Adjust offset as needed
+                current = section.getAttribute('id');
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            // The data-page attribute on your links should match the section id
+            if (link.getAttribute('href').substring(1) === current) {
+                link.classList.add('active');
+            }
+        });
+    });
 });
+
 </script>
 
 
